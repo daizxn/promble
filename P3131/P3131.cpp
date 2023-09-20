@@ -4,8 +4,6 @@ using namespace std;
 int l[7] = {0, -1, -1, -1, -1, -1, -1}, r[7];
 int S = 0;
 
-
-
 int main()
 {
     int n;
