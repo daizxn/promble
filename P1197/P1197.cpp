@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 using namespace std;
 
 const int N = 4e5 + 5;
@@ -32,13 +32,14 @@ int find(int x)
 int main()
 {
     std::ios::sync_with_stdio(false);
-    memset(BK,0,sizeof BK);
+    memset(BK, 0, sizeof BK);
 
     int n, m, k, totle;
     cin >> n >> m;
-    for (int i = 0; i <= n; i++){
+    for (int i = 0; i <= n; i++)
+    {
         f[i] = i;
-        head[i]=-1;
+        head[i] = -1;
     }
     for (int i = 1; i <= m; i++)
     {
@@ -47,7 +48,7 @@ int main()
         add(u, v);
         add(v, u);
     }
-        
+
     cin >> k;
     for (int i = 1; i <= k; i++)
     {
@@ -66,7 +67,7 @@ int main()
     {
         BK[broken[i]] = 0;
         totle++;
-        for (int j = head[broken[i]]; j!=-1; j = e[j].next)
+        for (int j = head[broken[i]]; j != -1; j = e[j].next)
         {
             if (!BK[e[j].to] && find(broken[i]) != find(e[j].to))
             {
