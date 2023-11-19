@@ -10,8 +10,8 @@
                 //"${file}",
                 "*.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-fexec-charset=GBK"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                // "-fexec-charset=GBK"
             ],
             "options": {
                 "cwd": "${fileDirname}"
